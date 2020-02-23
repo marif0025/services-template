@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import 'variables';
+@import 'home';
+body {
+    font-family: $primary-fonts-family;
+    color: $text-color;
+}

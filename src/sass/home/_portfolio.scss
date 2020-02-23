@@ -1,0 +1,36 @@
+.portfolio-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+    margin: 2rem auto 3.5rem;
+
+    li {
+
+        a {
+            color: $text-color;
+            font-weight: normal;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                color: $primary-color;
+                border-bottom-color: $primary-color;
+            }
+
+            &.active {
+                color: $primary-color;
+                border-bottom-color: $primary-color;
+            }
+        }
+    }
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+
+

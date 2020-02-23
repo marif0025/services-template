@@ -1,0 +1,41 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+section {
+    padding: 120px 0;
+}
+
+.section-heading {
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.desc {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+}
+
+.sec-bg {
+    background-color: $section-bg-color;
+}
+
+@import 'buttons';
