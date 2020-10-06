@@ -1,28 +1,21 @@
 .portfolio-nav {
     display: flex;
-    justify-content: space-between;
-    width: 47%;
+    justify-content: center;
     margin: 2rem auto 3.5rem;
+    gap: 50px;
 
-    li {
+    a {
+        color: var(--color-text);
+        font-weight: normal;
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
 
-        a {
-            color: var(--color-text);
-            font-weight: normal;
-            font-size: 1rem;
-            letter-spacing: 0.06em;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-
-            &:hover {
-                color: $primary-color;
-                border-bottom-color: $primary-color;
-            }
-
-            &.active {
-                color: $primary-color;
-                border-bottom-color: $primary-color;
-            }
+        &:hover,
+        &.active-tab {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
         }
     }
 }
@@ -33,4 +26,8 @@
     grid-gap: 3rem;
 }
 
-
+.portfolio-grid-item {
+    line-height: 0;
+    width: 360px;
+    height: 360px;
+}

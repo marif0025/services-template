@@ -9,6 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <title>Services Theme</title>
 </head>
 

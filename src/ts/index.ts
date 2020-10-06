@@ -8,3 +8,7 @@ window.addEventListener('scroll', () => {
         toTop.classList.remove('visible');
     }
 })
+
+import tabs from './modules/ui-tabs'
+
+tabs('ui--tab-wrap', 'ui--tab-link', 'ui--tab-content', 'active-tab')

@@ -10,8 +10,8 @@ html {
 
 :root {
     --font-family: 'Source Sans Pro', sans-serif;
-    --color-text: '#333333';
-    --color-primary: ' #8C84F9';
+    --color-text: #333333;
+    --color-primary: #8C84F9;
 }
 
 body {
@@ -29,6 +29,13 @@ a {
 
 img {
     width: 100%;
+}
+
+input,button,textarea {
+    border: 0;
+    background-color: transparent;
+    font-family: inherit;
+    outline: none;
 }
 
 .container {
@@ -58,5 +65,3 @@ section {
 .sec-bg {
     background-color: $section-bg-color;
 }
-
-@import 'buttons';

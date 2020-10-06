@@ -1,0 +1,13 @@
+.ui--tab-content {
+    display: none !important;
+    opacity: 0;
+
+    &.active-tab {
+        display: grid !important;
+    }
+
+    &.show {
+        opacity: 1;
+        transition: opacity .25s linear;
+    }
+}
