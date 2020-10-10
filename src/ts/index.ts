@@ -1,14 +1,10 @@
-const toTop = document.querySelector('.btt')!;
-
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 700) {
-        toTop.classList.add('visible');
-    }
-    else {
-        toTop.classList.remove('visible');
-    }
-})
-
 import tabs from './modules/ui-tabs'
+import './modules/totop'
+import './modules/slider'
 
-tabs('ui--tab-wrap', 'ui--tab-link', 'ui--tab-content', 'active-tab')
+tabs({
+    wrap: 'ui--tab-wrap',
+    link: 'ui--tab-link',
+    content: 'ui--tab-content',
+    active: 'active-tab',
+})

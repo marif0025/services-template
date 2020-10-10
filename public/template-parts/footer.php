@@ -1,4 +1,5 @@
 <footer>
+    <button class="owl-carousel">carousel</button>
     <div class="container footer-content">
         <div class="footer-item">
             <h3 class="footer-heading">

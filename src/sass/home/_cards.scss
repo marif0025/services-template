@@ -1,6 +1,7 @@
 .cards-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 980px;
     margin: 7rem auto 0;

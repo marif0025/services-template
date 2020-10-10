@@ -1,8 +1,15 @@
-const tabs = (wrap: string, link: string, content: string, active: string) => {
-    const WRAP_CLASS: string = wrap
-    const LINK_CLASS: string = link
-    const CONTENT_CLASS: string = content
-    const ACTIVE_CLASS: string = active
+interface options {
+    wrap: string,
+    link: string,
+    content: string,
+    active: string,
+}
+
+const tabs = (options: options) => {
+    const WRAP_CLASS: string = options.wrap
+    const LINK_CLASS: string = options.link
+    const CONTENT_CLASS: string = options.content
+    const ACTIVE_CLASS: string = options.active
 
     const tabsContainer = document.querySelectorAll(`.${WRAP_CLASS}`)
     if (tabsContainer.length < 1) { return }
@@ -15,7 +22,9 @@ const tabs = (wrap: string, link: string, content: string, active: string) => {
             link.addEventListener('click', (e) => {
                 e.preventDefault()
                 let href = link.getAttribute('rel')
-                let matchingContent = document.querySelector(`#${href}`)!
+                let matchingContent = document.querySelector(`#${href}`)
+
+                if (!matchingContent) { return }
 
                 tabContent.forEach(tc => {
                     if (tc === matchingContent) { return }
@@ -32,7 +41,9 @@ const tabs = (wrap: string, link: string, content: string, active: string) => {
                 matchingContent.classList.add(ACTIVE_CLASS)
 
                 setTimeout(() => {
-                    matchingContent.classList.add('show')
+                    if (matchingContent) {
+                        matchingContent.classList.add('show')
+                    }
                 }, 100)
             })
         })

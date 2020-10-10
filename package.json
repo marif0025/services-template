@@ -4,8 +4,8 @@
   "description": "A single page template for services website",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server "
+    "build": "webpack --env.mode production",
+    "dev": "webpack-dev-server --env.mode development"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,15 @@
   },
   "homepage": "https://github.com/marif0025/services-template#readme",
   "devDependencies": {
+    "@types/jquery": "^3.5.2",
     "ts-loader": "^8.0.4",
     "typescript": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4"
   }
 }

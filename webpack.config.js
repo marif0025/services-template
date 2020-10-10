@@ -1,7 +1,9 @@
 const path = require('path')
+const Webpack = require('webpack')
 
-module.exports = {
-    devtool: "eval-source-map",
+module.exports = ({ mode }) => ({
+    mode,
+    devtool: mode === 'production' ? false : "eval-source-map",
     entry: './src/ts/index.ts',
     module: {
         rules: [
@@ -22,5 +24,12 @@ module.exports = {
         libraryTarget: 'umd',
         library: 'uiLibrary',
         libraryExport: 'default'
-    }
-}
+    },
+    plugins: [
+        new Webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
+    ],
+});

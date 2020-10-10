@@ -35,7 +35,8 @@
             </div>
         </div>
 
-        <a href="index.php#services" class="down-arrow icon-arrowdown">
+        <a href="index.php#services" class="down-arrow">
+            <span class="icon-arrowdown"></span>
         </a>
     </div>
 </header>
