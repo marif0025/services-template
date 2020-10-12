@@ -1,25 +1,53 @@
 .showcase {
     display: flex;
     justify-content: space-between;
-    margin-top: 8rem;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    @include media(min, 768) {
+        margin-top: 4rem;
+    }
+
+    @include media(min, 1024) {
+        flex-direction: row;
+        margin-top: 8rem;
+    }
 }
 
 .showcase-textarea {
     display: flex;
     flex-direction: column;
-    margin-right: 4rem;
     width: 100%;
 
     h1 {
-        font-size: 78px;
+        font-size: 36px;
         font-weight: bold;
-        line-height: 1.6;
-        text-align: center;
+        line-height: 1.3;
         color: #ffffff;
+        text-align: center;
+
+        @include media(min, 768) {
+            font-size: 64px;
+            line-height: 1.4;
+        }
+
+        @include media(min, 1024) {
+            font-size: 72px;
+            line-height: 1.6;
+        }
+    }
+
+    @include media (min, 768) {
+        margin-right: 4rem;
     }
 
     .btn-primary {
-        margin: 5rem auto;
+        margin: 2.5rem auto;
+
+        @include media (min, 768) {
+            margin: 5rem auto;
+        }
+
         text-transform: uppercase;
         font-size: 20px;
         padding: 12px 40px;
@@ -30,6 +58,7 @@
 .showcase-img {
     width: 100%;
     max-width: 531px;
+    margin: auto;
 }
 
 .down-arrow {

@@ -1,8 +1,13 @@
 .portfolio-nav {
     display: flex;
-    justify-content: center;
     margin: 2rem auto 3.5rem;
-    gap: 50px;
+    gap: 30px;
+    overflow: auto;
+
+    @include media (min, 768) {
+        gap: 50px;
+        justify-content: center;
+    }
 
     a {
         color: var(--color-text);
@@ -11,6 +16,8 @@
         letter-spacing: 0.06em;
         padding-bottom: 4px;
         border-bottom: 2px solid transparent;
+        display: inline-block;
+        width: max-content;
 
         &:hover,
         &.active-tab {
@@ -24,18 +31,18 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 
-    @include media(min, 768) {
+    @include media(min, 500) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include media(min, 1220) {
+    @include media(min, 768) {
         grid-template-columns: repeat(3, 1fr);
     }
     grid-gap: 3rem;
 }
 
 .portfolio-grid-item {
+    overflow: hidden;
     line-height: 0;
-    width: 360px;
-    height: 360px;
+    width: 100%;
 }

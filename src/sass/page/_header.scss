@@ -3,8 +3,13 @@ header {
     background-position: center;
     background-position-y: top;
     height: 100vh;
-    padding-top: 2rem;
+    padding-top: 1rem;
     position: relative;
+    overflow: hidden;
+
+    @include media (min, 768) {
+        padding-top: 2rem;
+    }
 }
 
 .navbar {
@@ -15,6 +20,7 @@ header {
 .logo {
     font-size: 3rem;
     font-weight: bold;
+    z-index: 2;
 
     a {
         color: #ffffff;
@@ -24,14 +30,44 @@ header {
 .menu {
     display: flex;
     margin-left: auto;
-    gap: 2rem;
+
+    @include media (min, 768){
+        gap: 2rem;
+    }
+
+    @include media (max, 767) {
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(100%);
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-primary);
+        z-index: 1;
+        transition: transform .25s ease-in-out;
+    }
 
     a {
         cursor: pointer;
         color: #ffffff;
 
+        @include media (max, 767) {
+            display: block;
+            padding: 16px 32px;
+            text-align: center;
+        }
+
         &:hover {
             color: #ffffffe2;
         }
+    }
+}
+
+body.active-menu {
+    overflow: hidden;
+    .menu {
+        transform: translateX(0);
     }
 }

@@ -5,13 +5,17 @@ footer {
 
 .footer-content {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     color: #ffffff;
 
     .footer-item {
-        width: 25%;
+        width: 100%;
+        max-width: 220px;
 
-        &:first-child {
-            margin-right: 70px;
+        &:first-of-type {
+            max-width: 300px;
         }
 
         .footer-heading {
@@ -22,24 +26,20 @@ footer {
         }
 
         p {
-            line-height: 165%;
+            line-height: 1.6;
         }
 
         .social-links {
             display: flex;
+            gap: 1.25rem;
+            margin-top: 2rem;
 
             .social-link {
                 width: 36px;
-                background-color: $primary-color;
+                background-color: var(--color-primary);
                 border-radius: 50%;
                 display: flex;
                 padding: 8px 0;
-                margin-top: 2rem;
-                margin-right: 2.5rem;
-
-                &:last-child {
-                    margin-right: 0;
-                }
 
                 img {
                     width: 20px;
@@ -50,17 +50,13 @@ footer {
     }
 
     .footer-menu {
-
-        li {
-            margin-bottom: 1rem;
-            
-
-        }
         a {
+            display: inline-block;
             color: #ffffff;
             border-bottom: 2px solid transparent;
             padding-bottom: 4px;
             letter-spacing: 0.06em;
+            margin-bottom: 1rem;
 
             &:hover {
                 border-bottom-color: #fff;
